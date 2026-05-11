@@ -25,59 +25,35 @@ To write a program to simulate the process of seek and Flee behavior in Unity wi
     
 ### Program:
 ```
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class seekScript : MonoBehaviour
+public class NewMonoBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Transform target;  // The object to seek
-    public float speed = 5f;  // Movement speed
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (target == null) return;  // Exit if no target is assigned
-
-        // Calculate the desired direction
-        Vector3 direction = (target.position - transform.position).normalized;
-
-        // Move the object towards the target
-        transform.position += direction * speed * Time.deltaTime;
-    }
-}
-```
-```
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class fleeScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public Transform target;  // The object to seek
-    public float speed = 5f;  // Movement speed
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (target == null) return;  // Exit if no target is assigned
-
-        // Calculate the desired direction
-        Vector3 direction = (transform.position-target.position).normalized;
-
-        // Move the object towards the target
-        transform.position += direction * speed * Time.deltaTime;
-    }
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+  public Transform o1;
+  public Transform target;    
+  public Transform o3;
+  public float speed;
+  void Start()
+  {
+      
+  }
+  public void seeker()
+  {
+      Vector3 dir = (target.position - o1.position).normalized;
+      o1.position += dir * speed * Time.deltaTime;
+  }
+  public void fleer()
+  {
+      Vector3 dir = (o3.position - target.position).normalized;
+      o3.position += dir * speed * Time.deltaTime;
+  }
+  // Update is called once per frame
+  void Update()
+  {
+      seeker();
+      fleer();
+  }
 }
 ```
 ### Output:
