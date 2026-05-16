@@ -138,10 +138,6 @@ Check the following
 4. AICharacter assigned a start and goal
 ### Output:
 
-<img width="907" height="358" alt="WhatsApp Image 2026-05-15 at 14 40 21" src="https://github.com/user-attachments/assets/5b30ae2f-59f4-4a74-bce4-aedde44b4425" />
-
-
-<img width="896" height="379" alt="WhatsApp Image 2026-05-15 at 14 41 45" src="https://github.com/user-attachments/assets/29de1928-d661-467f-bae8-eca641c9226e" />
 
 
 ### Result:
